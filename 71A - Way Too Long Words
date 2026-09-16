@@ -1,3 +1,24 @@
+// Description of the problem : 
+// For example:
+// word → word because its length is less than 11.
+// localization → l10n because it has 12 characters.
+// internationalization → i18n
+
+// Algorithm
+// Read the number of words z.
+// Repeat z times:
+// Read a word.
+// Find its length n.
+// If n < 11, print the word unchanged.
+// Otherwise:
+// Take the first character.
+// Calculate the number of middle characters as n - 2.
+// Take the last character.
+// Print first + (n - 2) + last
+
+Java Code : 
+
+
 import java.util.Scanner;
  
 public class Main{
