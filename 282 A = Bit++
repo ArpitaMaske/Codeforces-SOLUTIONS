@@ -1,0 +1,41 @@
+
+// Algorithm Description
+// The algorithm solves the Bit++ problem by keeping track of an integer variable x, initially set to 0.
+
+// Read the number of statements, statementsNbr.
+
+// Initialize x = 0.
+
+// Repeat for each statement:
+
+// Read the statement as a string.
+
+// If the statement is ++X or X++, increment x by 1.
+
+// If the statement is --X or X--, decrement x by 1.
+
+// After processing all statements, print the final value of x.
+
+import java.util.Scanner;
+
+public class BitPlusPlus {
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        int statementsNbr = scanner.nextInt();
+        int x = 0;
+        for (int i = 0; i < statementsNbr; i++) {
+            String statement = scanner.next();
+            switch (statement){
+                case "++X":
+                case "X++":
+                    x++;
+                    break;
+                case "X--":
+                case "--X":
+                    x--;
+                    break;
+            }
+        }
+        System.out.println(x);
+    }
+    }
