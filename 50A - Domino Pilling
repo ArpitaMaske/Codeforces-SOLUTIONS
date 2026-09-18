@@ -1,0 +1,19 @@
+// Approch :
+// 1. we have given M X N Board to keep the Dominos 
+// 2. each domino is length (2x1) i.e 2 size 
+// 3. Let's go with example 
+// suppose m and n both are even = 2 4 , total area of board is 8 , and the domino size is 2 , so if we divide the 8/2 = 4 dominos can fit perfectly in that area. 
+// suppose m and n are odd , ex : 3 3 , total area of board is 9 , and the domino size is 2 , so if we divide the 9/2 = 4 dominos completely fit and 1 cell will remain empty . 
+// so will give the output as 4 . 
+
+import java.util.Scanner;
+public class Domino 
+{
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        int m = sc.nextInt();
+        int n = sc.nextInt();
+        System.out.print((m*n)/2);
+    }
+}
