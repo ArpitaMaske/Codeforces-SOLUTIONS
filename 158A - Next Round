@@ -1,0 +1,41 @@
+
+// 💡 Approach --->
+
+// Read the number of participants n and the position k.
+
+// Read the scores of all n participants.
+
+// Store the score of the k-th participant as the minimum qualifying score minscore.
+
+// Initialize the integer variable count = 0.
+
+// Traverse through all the scores one by one.
+
+// If a participant's score is greater than or equal to minscore and greater than 0, increment count.
+
+// After checking all participants, print count.
+
+
+import java.util.Scanner;
+public class NextRound{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int k = sc.nextInt();
+        int minscore=0;
+        int arr[]=new int[n+1];
+        for(int i=1;i<=n;i++){
+            arr[i]=sc.nextInt();
+            if(i==k){
+                minscore=arr[i];
+            }
+        }
+        int count = 0;
+        for(int i = 1;i<=n;i++){
+            if((arr[i]>=minscore)&&(arr[i]>0)){
+                count++;
+            }
+        }
+        System.out.print(count);
+    }
+}
