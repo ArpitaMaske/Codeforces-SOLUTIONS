@@ -1,0 +1,34 @@
+// 🔢 Problem: 263A – Beautiful Matrix
+
+// Today’s problem is a simple introduction to 2D arrays, matrix traversal, and calculating row/column differences. The goal is to move the single 1 in a 5 × 5 matrix to the center position (3, 3) using the minimum number of row and column swaps.
+
+// 💡 Approach --->
+
+// Read the 5 × 5 matrix.
+// Traverse through every element of the matrix.
+// Find the position of the single 1 by storing its row and column.
+// The required middle position is row 3, column 3.
+// Calculate the number of row moves needed using the difference between the current row and row 3.
+// Calculate the number of column moves needed using the difference between the current column and column 3.
+// Add both differences to get the minimum number of moves.
+// Print the final answer.
+
+
+import java.util.Scanner;
+public class Matrix{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int swap = 0;
+        int arr[][] = new int[5][5];
+        for(int i = 0;i<5;i++){
+            for(int j =0;j<5;j++){
+                arr[i][j]=sc.nextInt();
+                if(arr[i][j]==1){
+                    swap = Math.abs(i-2)+Math.abs(j-2);
+                   
+                }
+            }
+        }
+        System.out.print(swap);
+    }
+}
