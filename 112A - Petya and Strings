@@ -1,0 +1,42 @@
+// 💡 Algorithm / Steps
+// Read the two strings str1 and str2.
+// Convert both strings to lowercase so the comparison is case-insensitive.
+// Find the length of both strings.
+// Initialize result = 0.
+// If both strings have the same length:
+// Traverse both strings character by character.
+// Compare the characters at the same position.
+// If str1 character is greater than str2 character, set result = 1 and stop.
+// If str1 character is smaller than str2 character, set result = -1 and stop.
+// If both characters are equal, continue to the next character.
+// Print the value of result.
+// The output represents:
+// 1 → str1 comes after str2 lexicographically.
+// -1 → str1 comes before str2.
+// 0 → Both strings are equal.
+
+import java.util.Scanner;
+public class LexicalOrder{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String str1 = sc.nextLine().toLowerCase();
+        String str2 = sc.nextLine().toLowerCase();
+        int m = str1.length();
+        int n = str2.length();
+        int result = 0;
+        if(m==n){
+            for(int i =0;i<n;i++){
+                if(str1.charAt(i)>str2.charAt(i)){
+                    result =1;
+                    break;
+                }else if(str1.charAt(i)<str2.charAt(i)){
+                    result=-1;
+                    break;
+                }else{
+                    result=0;
+                }
+            }
+        }
+        System.out.print(result);
+    }
+}
