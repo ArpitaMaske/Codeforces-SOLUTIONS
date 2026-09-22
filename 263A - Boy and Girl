@@ -1,0 +1,35 @@
+// 💡 Approach --->
+
+// Read the username as a string str.
+// Find the length of the string and store it in n.
+// Initialize count = 1 to count the distinct characters.
+// Convert the string into a character array using toCharArray().
+// Sort the character array using Arrays.sort().
+// Traverse the sorted array from the first character to the second-last character.
+// Compare each character with the next character.
+// If the two adjacent characters are different, increment count.
+// After counting all the unique characters:
+// If count is even, print CHAT WITH HER!.
+// If count is odd, print IGNORE HIM!.
+
+import java.util.*;
+public class Solution{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String str =sc.nextLine();
+        int n = str.length();
+        int count = 1;
+        char[] arr=str.toCharArray();
+        Arrays.sort(arr);
+        for(int i =0;i<n-1;i++){
+            if(arr[i]!=arr[i+1]){
+                count++;
+            }
+        }
+        if((count%2)==0){
+            System.out.print("CHAT WITH HER!");
+        }else{
+            System.out.print("IGNORE HIM!");
+        }
+    }
+}
