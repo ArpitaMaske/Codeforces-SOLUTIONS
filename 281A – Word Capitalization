@@ -1,0 +1,19 @@
+// 💡 Approach --->
+
+// Read the input word as a string str.
+// Get the first character using str.charAt(0).
+// Convert the first character to uppercase using Character.toUpperCase().
+// Convert the uppercase character into a string using String.valueOf().
+// Use str.substring(1) to get the remaining characters starting from index 1.
+// Combine the uppercase first character with the remaining part of the string.
+// Print the final result.
+
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        String str = sc.nextLine();
+        String result = String.valueOf(Character.toUpperCase(str.charAt(0)));
+        System.out.print(result+str.substring(1));
+    }
+}
