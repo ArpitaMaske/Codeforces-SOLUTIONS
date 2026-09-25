@@ -1,0 +1,30 @@
+// 💡 Approach --->
+// Read the initial weights of A and B.
+// Every year:
+// A's weight becomes 3 times its previous weight.
+// B's weight becomes 2 times its previous weight.
+// After each year, check whether A > B.
+// If A becomes heavier, store the year in result and stop the loop using break.
+// Finally, print the number of years.
+
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b= sc.nextInt();
+        int result =0;
+        int i = 1;
+        for(i=1;i<10;i++){
+            int a1=3*a;
+            int b1=2*b;
+            a=a1;
+            b=b1;
+            if(a>b){
+                result=i;
+                break;
+            }
+        }
+        System.out.print(result);
+    }
+}
