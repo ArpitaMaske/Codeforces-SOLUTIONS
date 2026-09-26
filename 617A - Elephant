@@ -1,0 +1,24 @@
+// 💡 Algorithm 
+// Read the destination position x.
+// Divide x by 5 to find how many complete 5-unit steps are needed.
+// Check the remainder using x % 5.
+// If the remainder is not 0, add 1 more step.
+// Print the total number of steps.
+// This gives the minimum number of steps because the elephant can move at most 5 units in one step.
+
+import java.util.*;
+ 
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+       int result=0;
+        int count = x / 5;
+ 
+if (x % 5 != 0) {
+    count++;
+}
+        System.out.print(count);
+        
+}
+}
