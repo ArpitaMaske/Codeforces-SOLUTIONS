@@ -1,0 +1,27 @@
+// 💡 Approach --->
+// Read the number of stones n.
+// Read the string representing the colors of the stones.
+// Compare each stone with the next stone.
+// If two adjacent stones have the same color, increment count.
+// Each such duplicate adjacent stone requires one removal.
+// Continue until the second-last stone.
+// Print count as the minimum number of stones to remove.
+
+
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        sc.nextLine();
+        String str = sc.nextLine();
+        int count = 0;
+        char arr[]=str.toCharArray();
+        for(int i = 0;i<arr.length-1;i++){
+            if(arr[i]==arr[i+1]){
+                count++;
+            }
+        }
+        System.out.print(count);
+    }
+}
