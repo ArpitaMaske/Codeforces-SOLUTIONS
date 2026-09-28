@@ -1,0 +1,29 @@
+// 💡 Approach
+// Read k = cost of the first banana.
+// Read n = money the soldier has.
+// Read w = number of bananas.
+// Calculate the total cost:
+// k + 2k + 3k + ... + wk
+// If the soldier has enough money, print 0.
+// Otherwise, print the amount he needs to borrow: total cost - n.
+
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int k = sc.nextInt();
+        int n = sc.nextInt();
+        int w = sc.nextInt();
+        int result = 0;
+        int ans = 0;
+        for(int i = 1;i<=w;i++){
+            result=i*k;
+            ans+=result;
+        }
+        if(n>ans){
+            System.out.print("0");
+        }else{
+            System.out.print(ans-n);
+        }
+    }
+}
