@@ -1,0 +1,29 @@
+// 💡 Approach
+// Read the input string.
+// Count the number of uppercase and lowercase letters.
+// Traverse each character using charAt(i).
+// If uppercase letters are more than lowercase letters → convert the whole string to uppercase.
+// Otherwise → convert the whole string to lowercase.
+// If both counts are equal, the code converts the string to lowercase because of the else condition.
+
+import java.util.Scanner;
+public class Word{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int upper=0;int lower=0;
+        String str = sc.nextLine();
+        for(int i =0;i<str.length();i++){
+            char ch = str.charAt(i);
+            if(Character.isUpperCase(ch)){
+                upper++;
+            }else{
+                lower++;
+            }
+        }
+        if(upper>lower){
+            System.out.print(str.toUpperCase());
+        }else{
+            System.out.print(str.toLowerCase());
+        }
+    }
+}
