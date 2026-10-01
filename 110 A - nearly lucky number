@@ -1,0 +1,28 @@
+//     💡 Approach
+// Read the number as a String.
+// Convert the string into a character array.
+// Check every digit.
+// If the digit is '4' or '7', increase count.
+// After checking all digits:
+// If count == 4 or count == 7 → YES
+// Otherwise → NO
+
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        int count =0;
+        for(int i = 0;i<str.length();i++){
+            char ch[] =str.toCharArray();
+            if(ch[i]=='4'||ch[i]=='7'){
+                count++;
+            }
+        }
+        if(count==4 || count==7){
+            System.out.print("YES");
+        }else{
+            System.out.print("NO");
+        }
+    }
+}
