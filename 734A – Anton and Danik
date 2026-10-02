@@ -1,0 +1,35 @@
+// 💡 Approach
+// Read the number of games n.
+// Read the string containing the game results.
+// Convert the string into a character array.
+// Count 'A' and 'D'.
+// Compare the two counts:
+// Awin > Dwin → Anton
+// Awin < Dwin → Danik
+
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        long n = sc.nextInt();
+        sc.nextLine();
+        String str = sc.nextLine();
+        long Awin=0;long Dwin=0;
+        char ch[]=str.toCharArray();
+        for(int i = 0;i<str.length();i++){
+          if(ch[i]=='A'){
+                Awin++;
+            }else{
+                Dwin++;
+            }
+        }
+        if(Awin>Dwin){
+            System.out.print("Anton");
+            }else if(Awin<Dwin){
+            System.out.print("Danik");
+        }else{
+            System.out.print("Friendship");
+        }
+        }
+    
+}
